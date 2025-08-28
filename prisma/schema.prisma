@@ -1,0 +1,25 @@
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")   // pooled - PgBouncer
+  directUrl = env("DIRECT_URL")     // direct - do migracji
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+}
+
+model Run {
+  id          String   @id @default(cuid())
+  userId      String
+  startedAt   DateTime
+  finishedAt  DateTime?
+  distanceM   Int      @default(0)
+  createdAt   DateTime @default(now())
+}
