@@ -18,5 +18,9 @@ app.get('/health', async (_req, res) => {
   res.json({ ok: true });
 });
 
+app.get('/', (_req, res) => {
+  res.json({ message: 'Backend działa 🚀', health: '/health' });
+});
+
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`API listening on :${port}`));
