@@ -11,7 +11,9 @@
     "prisma:migrate": "prisma migrate dev",
     "postinstall": "prisma generate"
   },
-  "engines": { "node": "20.x" },
+  "engines": {
+    "node": "20.x"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

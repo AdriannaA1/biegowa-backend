@@ -5,12 +5,11 @@
     "moduleResolution": "Node",
     "outDir": "dist",
     "strict": false,
-
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-
-    "verbatimModuleSyntax": false
+    "verbatimModuleSyntax": false,
+    "types": ["node"]     // <— DODANE
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "dist", "test-db.ts"]
